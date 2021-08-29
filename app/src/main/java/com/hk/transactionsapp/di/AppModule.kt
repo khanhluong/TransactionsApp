@@ -3,6 +3,9 @@ package com.hk.transactionsapp.di
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.hk.transactionsapp.domain.TransactionsService
+import com.hk.transactionsapp.domain.repository.TransactionRepositoryImpl
+import com.hk.transactionsapp.domain.usecase.TransactionsUseCase
+import com.hk.transactionsapp.domain.usecase.TransactionsUseCaseImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,5 +44,12 @@ class AppModule {
     @Provides
     @Singleton
     fun provideGson(): Gson = GsonBuilder().create()
+
+
+    @Provides
+    @Singleton
+    fun provideTransactionsUseCase(repository: TransactionRepositoryImpl) =
+        TransactionsUseCaseImpl(repository) as TransactionsUseCase
+
 
 }
