@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp">
+    android:padding="@dimen/margin_10dp">
 
     <TextView
         android:id="@+id/tvTransactionId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minEms="2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tvTransactionDate"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +27,7 @@
         android:id="@+id/tvTransactionSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
         app:layout_constraintLeft_toRightOf="@id/tvTransactionId"
         app:layout_constraintTop_toBottomOf="@id/tvTransactionDate" />
 
@@ -34,7 +35,7 @@
         android:id="@+id/tvMoneySpent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size_16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

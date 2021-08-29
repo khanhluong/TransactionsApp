@@ -8,3 +8,11 @@ fun convertDate(dateString: String): String {
     val formatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault())
     return formatter.format(parser.parse(dateString)!!)
 }
+
+fun calculatorGST(credit: Double, debit: Double): Double {
+    return if (credit != 0.0) {
+        credit * .15
+    } else {
+        debit * .15
+    }
+}
