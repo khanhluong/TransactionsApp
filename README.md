@@ -1,3 +1,21 @@
+# The application have 2 screens:  
+Transactions Screen  
+Transaction Detail Screen
+
+
+Here is some techniques are using:  
+* Hilt injection  
+* Navigation component 
+* Android life cycle  
+* Data binding  
+* LiveData  
+* Kotlin coroutines  
+* Unit test  
+
+
+---
+
+
 # Mobile
 Create a simple application that will fetch a list of transactions from an api endpoint and display them in a list.  When a user selects a transaction they will be shown a second screen that will display a more detailed view of the transaction data. 
 
